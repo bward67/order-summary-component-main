@@ -1,0 +1,125 @@
+:root {
+  --clr-prm-pale-blue: hsl(225, 100%, 94%);
+  --clr-prm-bright-blue: hsl(245, 75%, 52%);
+  --clr-white: #ffffff;
+
+  --clr-n-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-n-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-n-dark-blue: hsl(223, 47%, 23%);
+
+  --ff-sans: "Red Hat Display", sans-serif;
+
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+}
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html {
+  font-family: var(--ff-sans);
+}
+.card {
+  background-image: url(images/pattern-background-mobile.svg);
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  max-width: 375px;
+  padding: 5em 1.5em;
+}
+main {
+  background-color: var(--clr-white);
+  border-radius: 1.5em;
+  max-width: 375px;
+  box-shadow: 0 0 1em 0 hsl(223, 10%, 65%);
+  overflow: hidden;
+  text-align: center;
+}
+img {
+  max-width: 100%;
+}
+h1 {
+  font-size: 1.5em;
+  color: var(--clr-n-dark-blue);
+  font-weight: var(--fw-900);
+}
+h2 {
+  font-size: 1em;
+  color: var(--clr-n-dark-blue);
+  font-weight: var(--fw-900);
+}
+
+.cancel {
+  color: var(--clr-n-desaturated-blue);
+  font-weight: 700;
+}
+.content {
+  line-height: 1.7;
+  color: var(--clr-n-desaturated-blue);
+  margin: 2em 0.5em 2em 0.5em;
+}
+p {
+  color: var(--clr-n-desaturated-blue);
+}
+section {
+  padding: 2em 1.5em;
+}
+.details-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em 0;
+  background-color: var(--clr-n-very-pale-blue);
+}
+.inner-box {
+  display: flex;
+}
+.price-box {
+  margin-left: 1em;
+}
+.boxes {
+  border-radius: 0.5em;
+  padding: 1em;
+  width: 100%;
+}
+a {
+  color: var(--clr-prm-bright-blue);
+  font-weight: 900;
+  font-size: 0.8em;
+}
+button {
+  font-family: inherit;
+  font-weight: 900;
+  background-color: var(--clr-prm-bright-blue);
+  border: none;
+  box-shadow: 0 0 1em 0 hsl(223, 10%, 65%);
+  color: var(--clr-white);
+  margin-bottom: 1em;
+}
+button:hover,
+.cancel:hover,
+a:hover {
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 5em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (min-width: 568px) {
+  .card {
+    max-width: 500px;
+    background-image: url(images/pattern-background-desktop.svg);
+  }
+  .content {
+    margin-block: 1em;
+  }
+}
